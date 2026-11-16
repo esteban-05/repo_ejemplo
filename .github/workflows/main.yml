@@ -17,11 +17,14 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd api-pedidos-hielo
+          npm install
 
       - name: Generate deployment package
         run: |
-          zip -r deploy.zip . -x "*.git*"
+          cd api-pedidos-hielo
+          zip -r ../deploy.zip . -x "*.git*"
 
       - name: Deploy to AWS Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
