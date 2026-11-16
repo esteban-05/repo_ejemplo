@@ -30,7 +30,7 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_session_token: ${{ secrets.AWS_SESSION_TOKEN }}
           application_name: order-management-platform
-          environment_name: Order-management-platform-env-2
+          environment_name: order-management-platform-env
           version_label: version-${{ github.sha }}
           region: us-east-1
           deployment_package: deploy.zip
